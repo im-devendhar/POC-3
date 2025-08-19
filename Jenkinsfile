@@ -1,4 +1,3 @@
-
 pipeline {
     agent any
 
@@ -10,7 +9,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/<your-username>/POC-Frontend.git'
+                git 'https://github.com/im-devendhar/POC-3.git'
             }
         }
 

@@ -49,7 +49,9 @@ sudo systemctl enable jenkins
 sudo apt install docker.io -y
 sudo systemctl start docker
 sudo systemctl enable docker
-sudo usermod -aG## 📁 Project Files
+sudo usermod -aG docker ubuntu
+newgrp docker
+
 
 - `Dockerfile`: Defines how to build the Docker image.
 - `Jenkinsfile`: Contains CI/CD pipeline instructions.

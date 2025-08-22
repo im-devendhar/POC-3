@@ -30,7 +30,8 @@ sudo apt install git -y
 
 ### 3. Install Java (required for Jenkins)
 ```bash
-sudo apt install openjdk-11-jdk -y
+sudo apt install openjdk-17-jdk -y
+
 ```
 
 ### 4. Install Jenkins

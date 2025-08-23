@@ -7,12 +7,6 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-            steps {
-                git branch: 'main', url: 'https://github.com/im-devendhar/POC-3.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'

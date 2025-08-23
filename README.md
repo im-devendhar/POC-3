@@ -27,6 +27,14 @@ sudo apt update && sudo apt upgrade -y
 ```bash
 sudo apt install git -y
 ```
+### 3. Install Docker
+```bash
+sudo apt install docker.io -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo usermod -aG docker ubuntu
+newgrp docker
+```
 
 ## 🚀 Jenkins and Java Installation Guide (Ubuntu 24.04 Noble)
 
@@ -75,6 +83,26 @@ sudo apt install jenkins -y
 ```bash
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
+
+Add Jenkins user to the Docker group
+
+sudo usermod -aG docker jenkins
+
+
+Restart Jenkins service
+
+sudo systemctl restart jenkins
+
+
+Restart Docker service (optional but recommended)
+
+sudo systemctl restart docker
+
+
+Verify Jenkins user can run Docker
+
+sudo su - jenkins
+docker ps
 ```
 
 ---
@@ -104,13 +132,6 @@ To build and deploy this project using Jenkins, make sure you have the following
 4. **Credentials Binding Plugin** – For securely storing DockerHub or GitHub credentials if pushing images.
 
 
-### 5. Install Docker
-```bash
-sudo apt install docker.io -y
-sudo systemctl start docker
-sudo systemctl enable docker
-sudo usermod -aG docker ubuntu
-newgrp docker
 
 
 - `Dockerfile`: Defines how to build the Docker image.

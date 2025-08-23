@@ -58,11 +58,14 @@ java --version
 
 Fix the GPG key issue and add the Jenkins repository:
 
-```bash
+
 # Download the updated Jenkins GPG key
+```bash
 sudo wget -O /usr/share/keyrings/jenkins-keyring.asc https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+```
 
 # Add Jenkins repository
+```bash
 echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkins.io/debian-stable binary/" | \
   sudo tee /etc/apt/sources.list.d/jenkins.list > /dev/null
 ```
@@ -83,24 +86,24 @@ sudo apt install jenkins -y
 ```bash
 sudo systemctl start jenkins
 sudo systemctl enable jenkins
-
+```
 Add Jenkins user to the Docker group
-
+```bash
 sudo usermod -aG docker jenkins
-
+```
 
 Restart Jenkins service
-
+```bash
 sudo systemctl restart jenkins
-
+```
 
 Restart Docker service (optional but recommended)
-
+```bash
 sudo systemctl restart docker
-
+```
 
 Verify Jenkins user can run Docker
-
+```bash
 sudo su - jenkins
 docker ps
 ```

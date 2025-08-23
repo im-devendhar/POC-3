@@ -97,12 +97,12 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 To build and deploy this project using Jenkins, make sure you have the following plugins installed:
 
 ### ✅ Required Plugins
-```bash
+
 1. **Pipeline Plugin** – Allows Jenkins to read and run the `Jenkinsfile`.
 2. **Git Plugin** – For pulling this repository into Jenkins.
 3. **Docker Pipeline Plugin** – Enables `docker.build()` and `docker.run()` steps in the pipeline.
 4. **Credentials Binding Plugin** – For securely storing DockerHub or GitHub credentials if pushing images.
-```
+
 
 ### 5. Install Docker
 ```bash

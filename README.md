@@ -2,6 +2,9 @@
 
 # POC-3
 
+<img width="740" height="298" alt="image" src="https://github.com/user-attachments/assets/afd760c7-b1f8-4096-8b43-bd4e2f242c1c" />
+
+
 ##  Project Deployment on AWS EC2
 
  Deploying the project using **Git**, **Jenkins**, and **Docker** on an AWS EC2 instance.
@@ -134,6 +137,10 @@ To build and deploy this project using Jenkins, make sure you have the following
 3. **Docker Pipeline Plugin** – Enables `docker.build()` and `docker.run()` steps in the pipeline.
 4. **Credentials Binding Plugin** – For securely storing DockerHub or GitHub credentials if pushing images.
 
+After all this steps we access the application at  
+  ```bash
+http://<IP Adress>/
+  ```
 
 
 

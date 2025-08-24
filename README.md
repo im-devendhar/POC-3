@@ -2,21 +2,21 @@
 
 # POC-3
 
-## 🚀 Project Deployment Guide on AWS EC2
+##  Project Deployment on AWS EC2
 
-This guide explains how to deploy your project using **Git**, **Jenkins**, and **Docker** on an AWS EC2 instance.
+ Deploying the project using **Git**, **Jenkins**, and **Docker** on an AWS EC2 instance.
 
 ---
 
-## 🛠️ Prerequisites
+##  Prerequisites
 
-- AWS EC2 instance (Ubuntu is recommended)
+- AWS EC2 instance (Ubuntu )
 - SSH access to the EC2 instance
 - Internet connectivity
 
 ---
 
-## 📦 Installation Steps
+##  Installation Steps
 
 ### 1. Update System Packages
 ```bash
@@ -36,13 +36,13 @@ sudo usermod -aG docker ubuntu
 newgrp docker
 ```
 
-## 🚀 Jenkins and Java Installation Guide (Ubuntu 24.04 Noble)
+##  Jenkins and Java Installation Guide (Ubuntu 24.04 Noble)
 
 This guide walks you through installing **OpenJDK 17** and **Jenkins** on Ubuntu 24.04, including fixing GPG key issues and enabling the Jenkins service.
 
 ---
 
-### 🔧 Step 1: Install Java (OpenJDK 17)
+###  Step 1: Install Java (OpenJDK 17)
 
 Jenkins requires Java to run. Install OpenJDK 17:
 
@@ -54,7 +54,7 @@ java --version
 
 ---
 
-### 🔐 Step 2: Add Jenkins Repository and GPG Key
+###  Step 2: Add Jenkins Repository and GPG Key
 
 Fix the GPG key issue and add the Jenkins repository:
 
@@ -72,7 +72,7 @@ echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] https://pkg.jenkin
 
 ---
 
-### 📦 Step 3: Install Jenkins
+###  Step 3: Install Jenkins
 
 ```bash
 sudo apt update
@@ -81,7 +81,7 @@ sudo apt install jenkins -y
 
 ---
 
-### ▶️ Step 4: Start and Enable Jenkins Service
+###  Step 4: Start and Enable Jenkins Service
 
 ```bash
 sudo systemctl start jenkins
@@ -110,7 +110,7 @@ docker ps
 
 ---
 
-### 🌐 Step 5: Access Jenkins Web Interface
+###  Step 5: Access Jenkins Web Interface
 
 Open your browser and go to:
 
@@ -127,7 +127,7 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 To build and deploy this project using Jenkins, make sure you have the following plugins installed:
 
-### ✅ Required Plugins
+###  Required Plugins
 
 1. **Pipeline Plugin** – Allows Jenkins to read and run the `Jenkinsfile`.
 2. **Git Plugin** – For pulling this repository into Jenkins.
